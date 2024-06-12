@@ -1,0 +1,233 @@
+<html>
+    <head>
+        <title>
+            Books
+        </title>
+    </head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        
+
+.Tnav{
+    background-color:#89778f;
+    width:100%;
+    height:7%;}
+    .fa.fa-ellipsis-v{
+           color:white;
+           margin-left:920px;
+           font-size:80px;
+          margin-top:50px;
+    }
+    .comma{
+        color:#89778f;
+    }
+    .abt{
+        Font-family:times new roman;
+        background-color:#f1f1f1e0;
+        padding:10px; 
+        border-radius:40px;}
+.button-container {
+  text-align: center; /* Center the content horizontally */
+}
+
+.read-more {
+  color: #89778f;
+  background-color: none;
+  border: 1px solid #89778f;
+  border-radius: 10px;
+  padding: 8px 12px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.read-more:hover {
+  background-color: #89778f;
+  color: white;
+}
+
+.read-more span {
+  margin-left: 5px;
+}
+.Page {
+            background-color: #4eb8c4;
+            border-radius: 10px;
+            color: white;
+            animation: emerge 1.5s ease-in-out;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        .Page:hover {
+            background-color: #4eb8c4;
+        }
+.h1 {
+            color:olive;
+            font-family: Times new roman;
+            font-size: 120px;
+            text-align: center;
+            animation: slide-in 1.5s forwards;
+        }
+.pi {
+    padding: 20px;
+    font-size: 24px;
+    line-height: 1.6;
+    font-family: Arial, sans-serif;
+    color: #333;
+    text-align:center; 
+     background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.btn {
+    background-color: black;
+    color: #89778f;
+    
+    border: 3px solid;
+    border-image: linear-gradient(to right, #ff00ff, #00ffff) 1; /* Neon-colored border */
+    padding: 10px 20px;
+    text-align: center;
+    margin: 0 auto; /* Center the button horizontally */
+    display: block; /* Ensure it takes the full width */
+    font-size: 38px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); /* Light effect */
+    width: 50%; /* Make button 50% width */
+}
+
+
+.h1 {
+  position: relative;
+  opacity: 0;
+  transform: translateY(-50px); /* Move the text up initially */
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.h1::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -3px; /* Adjust the position of the underline */
+  width: 100%;
+  height: 3px; /* Adjust the thickness of the underline */
+  background-color: transparent; /* Transparent background */
+  opacity: 1;
+  animation: wave 1s infinite linear; /* Wavy underline animation */
+}
+
+@keyframes wave {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 100% 0;
+  }
+}
+
+.h1.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.go-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #333;
+  color: #fff;
+  width: 90px;
+  height: 70px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 60px;
+  font-size: 60px;
+  text-decoration: none;
+}
+
+.go-to-top:hover {
+  background-color: #555;
+}
+     </style>
+    <body>
+        
+        <nav class="Tnav">
+            
+       <a href="2nd.html">
+<i class="fa fa-ellipsis-v">
+   </a>
+</i>
+  
+
+    </nav>
+        <img src="logo.jpg" width="100%" height="35%"></img>
+        
+    </div><br><br>
+   
+ <div class="abt">
+     <h2 style="color:olive;text-align:center;font-size:40px;"> About me</h2>
+    <span class="comma" style="color: purple;">"</span>
+    <p class="P1" style="display: inline; color: black;Font-size:30px;font-family:Arial, sans-serif;">
+        Welcome to the inspiring journey of Sudha Shah. From being the first in my family to pursue higher education to becoming an award-winning author, my life is a testament to resilience and perseverance. At 73, I reflect on breaking societal norms, embracing lifelong learning, and advocating for women's empowerment. Join me as I share the stories and experiences that have shaped my path, celebrating the strength and significance of women in a male-dominated world.
+    </p>
+    <span class="comma" style="color: purple;">"</span><br><br>
+  
+ <div class="button-container">
+    <a href="2nd.html" class="read-more">
+        Read More <span>&rarr;</span>
+    </a>
+</div>
+
+<img src="border.png" width="100%" style="margin-top:-30px;"></div></div>
+  <a href="new.html" class="go-to-top"><i class="fas fa-arrow-up"></i></a>
+            <br>
+              <div class="abt">
+            <h1 class="h1" id="books-heading">Books</h1>
+            
+            <script >
+                window.addEventListener('scroll', function() {
+  var booksHeading = document.getElementById('books-heading');
+  var bounding = booksHeading.getBoundingClientRect();
+  
+  if (bounding.top >= 0 && bounding.bottom <= (window.innerHeight || document.documentElement.clientHeight)) {
+    booksHeading.classList.add('visible');
+  } else {
+    booksHeading.classList.remove('visible');
+  }
+  
+  if (bounding.bottom <= 0) {
+    booksHeading.classList.add('underline');
+  } else {
+    booksHeading.classList.remove('underline');
+  }
+});
+            </script>         
+               <a href="https://drive.google.com/file/d/1HXtFnaJK4LDF8WgUokqhi0chJcekwpJI/view?usp=drivesdk">
+                <img src="book5.png" width="950" height="650" style="border: solid; color:#89778f;padding:10px 10px;" class="Boo2">
+            </a>
+            <div class="abt">
+                <p style="Text-align:center;" class="pi" >Women's place in a male dominated society</p>
+            </div>
+            <br>
+          <div class="pi">
+    It is a beautiful book written by Sudha Shah. She discusses the position of women in a male-dominated society, highlighting issues such as early marriage and motherhood, and the need for female empowerment. The piece reflects on cultural attitudes towards women, urging a shift towards respect and equality, and celebrating women’s achievements and potential.<br>
+
+            <a href="https://drive.google.com/file/d/1HXtFnaJK4LDF8WgUokqhi0chJcekwpJI/view?usp=drivesdk" class="btn">
+                <i class="fa fa-download"></i> Download
+            </a>
+        </div></div>
+    </div>
+    <br>
+    <div class="abt">
+ <div class="bk">
+            <br>
+            <a href="https://drive.google.com/drive/folders/16t-embvxP40uCoGOdipkzPNEQEEgulKM">
+                <img src="book2.png" width="450" height="400" style="border: solid; color:#89778f;padding:40px 50px;margin-left:150px;" class="Boo2">
+            </a><br><br>
+            <p class="pi" style="display: inline; color: black;Font-size:30px;font-family:Arial, sans-serif;text-align:center;margin-left:100px;">Light of Knowledge, Joy of the Soul.</p>
+        <br><br>
+        <a href="https://drive.google.com/file/d/1HXtFnaJK4LDF8WgUokqhi0chJcekwpJI/view?usp=drivesdk" class="btn">
+            <i class="fa fa-download"></i> Download
+        </a>
+    </div></div>
+    <br><br>
+    </body>
+    
+</html>
