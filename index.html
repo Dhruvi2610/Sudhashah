@@ -113,6 +113,56 @@
     <!-- Navigation Bar -->
     <nav class="Tnav">
         <h2 style="color: white;">Books and Articles</h2>
+  <!-- Google Translate Dropdown -->
+<div id="google_translate_element"></div>
+
+<!-- Google Translate Script -->
+<script type="text/javascript">
+    function googleTranslateElementInit() {
+        new google.translate.TranslateElement({
+            pageLanguage: 'en',
+            includedLanguages: 'en,hi,gu,mr',  // Add the languages you want
+            layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+        }, 'google_translate_element');
+    }
+
+    // Load Google Translate script
+    (function() {
+        var script = document.createElement('script');
+        script.type = 'text/javascript';
+        script.src = 'https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit';
+        document.body.appendChild(script);
+    })();
+</script>
+
+<!-- Custom Styling for Google Translate Dropdown -->
+<style>
+    /* Google Translate Container */
+    #google_translate_element {
+        font-family: Arial, sans-serif;
+        background-color: #89778f; /* Background color */
+        border-radius: 5px; /* Rounded corners */
+        padding: 5px;
+        display: inline-block;
+    }
+
+    /* Dropdown Style */
+    .goog-te-combo {
+        font-size: 14px; /* Smaller text */
+        padding: 5px 10px; /* Reduced padding to make it thin */
+        border-radius: 5px;
+        border: 1px solid #4eb8c4;
+        background-color: #fff;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        width: auto; /* Adjust the width to the content */
+    }
+
+    /* Hover Effect for Dropdown */
+    .goog-te-combo:hover {
+        background-color: #4eb8c4;
+        color: white;
+    }
+</style>
     </nav>
 
     <!-- Logo Section -->
