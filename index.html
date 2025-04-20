@@ -15,7 +15,7 @@
         .Tnav {
             background-color: #89778f;
             width: 100%;
-            height: 50px;
+            height: 80px;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -107,13 +107,82 @@
         .go-to-top:hover {
             background-color: #555;
         }
+        /* Custom Google Translate Dropdown */
+        #google_translate_element {
+            font-family: Arial, sans-serif;
+        }
+        .goog-te-combo {
+            padding: 8px 15px;
+            font-size: 16px;
+            border-radius: 5px;
+            border: 1px solid #4eb8c4;
+            background-color: #fff;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        
+        /* Style for the Translate dropdown button */
+        .language-selector {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .language-selector select {
+            margin: 10px;
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 5px;
+            background-color: #4eb8c4;
+            color: white;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .language-selector select:hover {
+            background-color: #3b9c9a;
+        }
+         .gallery {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      padding: 10px;
+      justify-items: center;
+    }
+    .gallery img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+      cursor: pointer;
+    }
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+    .view-more-btn {
+      display: block;
+      margin: 30px auto 0;
+      text-align: center;
+      padding: 10px 20px;
+      background-color: #4eb8c4;
+      color: white;
+      text-decoration: none;
+      font-size: 16px;
+      border-radius: 8px;
+      transition: background-color 0.3s ease;
+      width: max-content;
+    }
+    .view-more-btn:hover {
+      background-color: #89778f;
+    }
+        
     </style>
 </head>
 <body>
     <!-- Navigation Bar -->
     <nav class="Tnav">
         <h2 style="color: white;">Books and Articles</h2>
-  <!-- Google Translate Dropdown -->
+<!-- Google Translate Dropdown -->
 <div id="google_translate_element"></div>
 
 <!-- Google Translate Script -->
@@ -121,7 +190,7 @@
     function googleTranslateElementInit() {
         new google.translate.TranslateElement({
             pageLanguage: 'en',
-            includedLanguages: 'en,hi,gu,mr',  // Add the languages you want
+            includedLanguages: 'en,hi,gu,mr,en',  // Add the languages you want
             layout: google.translate.TranslateElement.InlineLayout.SIMPLE
         }, 'google_translate_element');
     }
@@ -215,7 +284,7 @@
                 <b>"Women's Place in a Male-Dominated Society"</b> by Sudha Shah highlights women's challenges and advocates for empowerment.
             </p>
             <div style="text-align: center;">
-                <a href="https://drive.google.com/file/d/1HXtFnaJK4LDF8WgUokqhi0chJcekwpJI/view?usp=drivesdk" class="btn">
+                <a href="https://drive.google.com/drive/folders/16t-embvxP40uCoGOdipkzPNEQEEgulKM" class="btn">
                     <i class="fa fa-download"></i> Download
                 </a>
             </div>
@@ -249,8 +318,7 @@
             <h4 style="color: #89778f;text-align:center;">Vyakti Ghadtar</h4>
             <p style="font-size: 16px; color: #333; text-align: center; max-width: 300px;">
                
-I have added the audiobook of "Vyakti Ghadtar" by Father Wallace. It is a simple and inspiring book that focuses on personal behavior and character development. This book offers stories and lessons on making life better and more meaningful. You will find it in the attached file.
-
+મૈં વ્યક્તિ ઘડતર ફાધર વલ્લેસનું ઑડિયોબુક જોડ્યું છે. આ એક સરળ અને પ્રેરણાદાયક પુસ્તક છે, જે વ્યક્તિગત વર્તણૂક અને વ્યક્તિત્વના વિકાસ પર આધારિત છે. આ પુસ્તક જીવનને સારો અને અર્થપૂર્ણ બનાવવાની વાર્તાઓ અને પાઠો આપે છે. તમે આ ઑડિયોબુકને જોડેલા ફાઈલમાં પામશો.
 
 
             </p>
@@ -344,7 +412,32 @@ I have added the audiobook of "Vyakti Ghadtar" by Father Wallace. It is a simple
     .go-to-top i {
         font-size: 20px; /* Adjust the icon size */
     }
+    h2 {
+      text-align: center;
+      color: olive;
+      margin-bottom: 10px;
+      font-size: 28px;
+    }
 </style>
+<h2>Featured Maps Gallery</h2>
+  <p class="gallery-description">Here's a glimpse of some of our maps. Click "View More" to explore the full gallery!</p>
+
+  <div class="gallery">
+    <div>
+      <p>Map 1: </p>
+      <a href="gallery.html#map1"><img src="map1.jpg" alt="Map 1"></a>
+    </div>
+    <div>
+      <p>Map 2: Soul's Journey</p>
+      <a href="gallery.html#map2"><img src="map6.jpg" alt="Map 2"></a>
+    </div>
+    <div>
+      <p>Map 3: Lavana Samudra & Antardvips</p>
+      <a href="gallery.html#map3"><img src="map3.jpg" alt="Map 3"></a>
+    </div>
+  </div>
+
+  <a href="gallery.html" class="view-more-btn">View More</a><br>
   <!-- Footer Section -->
 <footer style="background-color: #f1f1f1e0; padding: 30px 0; text-align: center; border-top: 2px solid #4eb8c4;">
     <p style="font-size: 18px; color: #4eb8c4; font-family: 'Arial', sans-serif;">
@@ -356,6 +449,7 @@ I have added the audiobook of "Vyakti Ghadtar" by Father Wallace. It is a simple
     <div style="font-size: 14px; color: #4eb8c4; font-family: 'Arial', sans-serif; margin-top: 10px;">
         <p>© 2024 Sudha Shah's Journey. All Rights Reserved.</p>
     </div>
-</footer>
+</footer>    
+
 </body>
 </html>
